@@ -1,30 +1,43 @@
 # mui-confirm-dialog
 
-> Confirm Dialog Box using MUI
+## Confirm Dialog Box using Material UI
 
-[![NPM](https://img.shields.io/npm/v/mui-confirm-dialog.svg)](https://www.npmjs.com/package/mui-confirm-dialog) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+### Usage
 
-## Install
+`
+import { ConfirmDialog } from 'mui-confirm-dialog'
 
-```bash
-npm install --save mui-confirm-dialog
-```
+const ExampleComponent = () => {
+const [open, setOpen] = useState(true)
 
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'mui-confirm-dialog'
-import 'mui-confirm-dialog/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const toggleDialog = () => {
+setOpen((st) => !st)
 }
-```
 
-## License
+const onSuccess = () => {
+console.log('success')
+toggleDialog()
+// Do Anything on Success
+}
 
-MIT © [UAhmadSoft](https://github.com/UAhmadSoft)
+return (
+<ConfirmDialog
+      open={open}
+      toggleDialog={toggleDialog}
+      dialogTitle='Perform This Action ?'
+      success={onSuccess}
+    />
+)
+}
+`
+
+### Props
+
+-open
+-toggleDialog
+-dialogTitle
+-success
+
+### Author
+
+UAhmadSoft

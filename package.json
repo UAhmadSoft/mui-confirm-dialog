@@ -1,6 +1,6 @@
 {
   "name": "mui-confirm-dialog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Confirm Dialog Box using MUI",
   "author": "UAhmadSoft",
   "license": "MIT",
@@ -49,5 +49,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2"
+  }
 }

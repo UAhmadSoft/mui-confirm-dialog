@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { ExampleComponent } from 'mui-confirm-dialog'
-import 'mui-confirm-dialog/dist/index.css'
+import { ConfirmDialog } from 'mui-confirm-dialog'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [open, setOpen] = useState(true)
+
+  const toggleDialog = () => {
+    setOpen((st) => !st)
+  }
+
+  const onSuccess = () => {
+    console.log('success')
+    toggleDialog()
+    // Do Anything on Success
+  }
+
+  return (
+    <ConfirmDialog
+      open={open}
+      toggleDialog={toggleDialog}
+      dialogTitle='Perform This Action ?'
+      success={onSuccess}
+    />
+  )
 }
 
 export default App

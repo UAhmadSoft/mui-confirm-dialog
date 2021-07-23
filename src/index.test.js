@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { DeleteConfirmDialog } from '.'
 
-describe('ExampleComponent', () => {
+describe('DeleteConfirmDialog', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(DeleteConfirmDialog).toBeTruthy()
   })
 })
